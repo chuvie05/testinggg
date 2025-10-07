@@ -1,0 +1,101 @@
+body {
+  font-family: "Comic Sans MS", cursive;
+  background-color: #900e07;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Layout */
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Left: tomato buttons */
+.alphabet-buttons {
+  width: 30%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: min-content;
+  justify-items: center;
+  align-items: center;
+  gap: 5px;
+  background-color: #c29062;
+  padding: 10px;
+}
+
+.letter-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.letter-btn img {
+  width: 90px;
+  height: 85px;
+  object-fit: contain;
+}
+
+.letter-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Right: card display */
+.card-area {
+  width: 65%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card flip animation */
+.card {
+  width: 700px;    /* 2x bigger than before */
+  height: 800px;   /* 2x bigger than before */
+  perspective: 1000px;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease;
+}
+
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  box-shadow: none;
+  background-color: transparent;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-front img,
+.card-back img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; 
+  border-radius: 0;
+  margin: 0;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+/* Hide any text on the back */
+.card-back p {
+  display: none;
+}
