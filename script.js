@@ -21,9 +21,24 @@ const cardsData = {
   D: [
     { word: "Duck", img: "cards/duckcard.png", audio: "audio/duck.wav" }
   ],
+  E: [
+    { word: "Egg", img: "cards/eggcard.png", audio: "" }
+  ],
   F: [
     { word: "Fire", img: "cards/firecard.png", audio: "audio/fire.wav" },
     { word: "Fork", img: "cards/forkcard.png", audio: "audio/fork.wav" }
+  ],
+  G: [
+    { word: "Grass", img: "cards/grasscard.png", audio: "" },
+    { word: "Grape", img: "cards/grapecard.png", audio: "" }
+  ],
+  H: [
+    { word: "House", img: "cards/housecard.png", audio: "" },
+    { word: "Happy", img: "cards/happycard.png", audio: "" }
+  ],
+  I: [
+    { word: "Igloo", img: "cards/igloocard.png", audio: "" },
+    { word: "Icecream", img: "cards/icecreamcard.png", audio: "" }
   ]
 };
 
