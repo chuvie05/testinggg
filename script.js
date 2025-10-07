@@ -42,7 +42,7 @@ const cardsData = {
   ]
 };
 
-// Add click event for each button
+//click event
 buttons.forEach(btn => {
   btn.addEventListener("click", () => {
     const letter = btn.dataset.letter;
