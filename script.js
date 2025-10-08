@@ -50,15 +50,15 @@ buttons.forEach(btn => {
 
     if (!data) return;
 
-    // Pick a random card from the selected letter
+    // Pick a random card
     const randomCard = data[Math.floor(Math.random() * data.length)];
 
-    // Update content
+    // content
     cardImage.src = randomCard.img;
     cardWord.textContent = randomCard.word;
     cardAudio.src = randomCard.audio;
 
-    // Flip the card
+    // Flip
     card.classList.add("flipped");
 
     // Play audio
