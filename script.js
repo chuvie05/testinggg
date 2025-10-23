@@ -22,23 +22,23 @@ const cardsData = {
     { word: "Duck", img: "cards/duckcard.png", audio: "audio/duck.wav" }
   ],
   E: [
-    { word: "Egg", img: "cards/eggcard.png", audio: "" }
+    { word: "Egg", img: "cards/eggcard.png", audio: "audio/Egg.wav" }
   ],
   F: [
     { word: "Fire", img: "cards/firecard.png", audio: "audio/fire.wav" },
     { word: "Fork", img: "cards/forkcard.png", audio: "audio/fork.wav" }
   ],
   G: [
-    { word: "Grass", img: "cards/grasscard.png", audio: "" },
-    { word: "Grape", img: "cards/grapecard.png", audio: "" }
+    { word: "Grass", img: "cards/grasscard.png", audio: "audio/Grass.wav" },
+    { word: "Grape", img: "cards/grapecard.png", audio: "audio/Grape.wav" }
   ],
   H: [
-    { word: "House", img: "cards/housecard.png", audio: "" },
-    { word: "Happy", img: "cards/happycard.png", audio: "" }
+    { word: "House", img: "cards/housecard.png", audio: "audio/House.wav" },
+    { word: "Happy", img: "cards/happycard.png", audio: "audio/Happy.wav" }
   ],
   I: [
-    { word: "Igloo", img: "cards/igloocard.png", audio: "" },
-    { word: "Icecream", img: "cards/icecreamcard.png", audio: "" }
+    { word: "Igloo", img: "cards/igloo.png", audio: "audio/Igloo.wav" },
+    { word: "Icecream", img: "cards/icecreamcard.png", audio: "audio/Ice-cream.wav" }
   ]
 };
 
@@ -64,4 +64,26 @@ buttons.forEach(btn => {
     // Play audio
     cardAudio.play();
   });
+});
+
+// --- Popup Credits ---
+const creditsBtn = document.getElementById('creditsBtn');
+const creditsPopup = document.getElementById('creditsPopup');
+const closePopup = document.getElementById('closePopup');
+
+// Open popup
+creditsBtn.addEventListener('click', () => {
+  creditsPopup.style.display = 'block';
+});
+
+// Close popup
+closePopup.addEventListener('click', () => {
+  creditsPopup.style.display = 'none';
+});
+
+// Close popup when clicking outside content
+window.addEventListener('click', (event) => {
+  if (event.target === creditsPopup) {
+    creditsPopup.style.display = 'none';
+  }
 });
