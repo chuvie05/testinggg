@@ -4,6 +4,12 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  cursor: url("cursor/pointer.png"), auto;
+}
+
+.letter-btn:hover {
+  cursor: url("cursor/hover.png"), pointer;
+  transform: scale(1.1);
 }
 
 /* Layout */
