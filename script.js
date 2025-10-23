@@ -66,24 +66,17 @@ buttons.forEach(btn => {
   });
 });
 
-// --- Popup Credits ---
-const creditsBtn = document.getElementById('creditsBtn');
-const creditsPopup = document.getElementById('creditsPopup');
-const closePopup = document.getElementById('closePopup');
+// open popup when clicking hamburger
+const popup = document.getElementById("creditsPopup");
+const btn = document.getElementById("creditsBtn");
 
-// Open popup
-creditsBtn.addEventListener('click', () => {
-  creditsPopup.style.display = 'block';
+btn.addEventListener("click", () => {
+  popup.style.display = "block";
 });
 
-// Close popup
-closePopup.addEventListener('click', () => {
-  creditsPopup.style.display = 'none';
-});
-
-// Close popup when clicking outside content
-window.addEventListener('click', (event) => {
-  if (event.target === creditsPopup) {
-    creditsPopup.style.display = 'none';
+// close popup when clicking outside the content
+window.addEventListener("click", (event) => {
+  if (event.target === popup) {
+    popup.style.display = "none";
   }
 });
